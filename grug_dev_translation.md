@@ -79,38 +79,38 @@ Sometimes it's probably best to not even tell the project manager and do it the 
 
 It is in the project manager's best interest anyways, so don't feel too bad about taking this approach. 
 
-# TODO Factoring Your Code
-next strategy very harder: break code base up properly (fancy word: "factor your code properly") here is hard give general advice because each system so different. however, one thing grug come to believe: not factor your application too early!
+# Factoring Your Code
+This next strategy is harder: break the codebase up properly (factor your code properly). It's hard to give general advice because each system is so different. However, one thing I've come to believe: do not factor your application too early!
 
-early on in project everything very abstract and like water: very little solid holds for grug's struggling brain to hang on to. take time to develop "shape" of system and learn what even doing. grug try not to factor in early part of project and then, at some point, good cut-points emerge from code base
+Early on in a project everything is very abstract and like water: there are very few solid holds for your brain to hang on to. It takes time to develop the "shape" of the system and learn what it's even doing. Try not to factor in the early part of the project and then, at some point, good cut-points will emerge from the codebase
 
-good cut point has narrow interface with rest of system: small number of functions or abstractions that hide complexity demon internally, like trapped in crystal
+A good cut point has a narrow interface with the rest of the system: a small number of functions or abstractions that hide the system's complexity.
 
-grug quite satisfied when complexity demon trapped properly in crystal, is best feeling to trap mortal enemy!
+You will be quite satisfied when you have minimized the system's complexity.
 
-grug try watch patiently as cut points emerge from code and slowly refactor, with code base taking shape over time along with experience. no hard/ fast rule for this: grug know cut point when grug see cut point, just take time to build skill in seeing, patience
+Watch patiently as cut points emerge from the code and slowly refactor, with the codebase taking shape over time along with experience. There is no hard and fast rule for this: you will know a cut point when you see a cut point, just take time to build skill in looking for it, and have patience.
 
-sometimes grug go too early and get abstractions wrong, so grug bias towards waiting
+Sometimes you will go in too early and get abstractions wrong, so bias towards waiting longer before refactoring.
 
-big brain developers often not like this at all and invent many abstractions start of project
+Some "big picture" developers do not like this at all and will invent many abstractions at the start of the project.
 
-grug tempted to reach for club and yell "big brain no maintain code! big brain move on next architecture committee leave code for grug deal with!"
+It's tempting to complain to them, they are not maintaing the code afterall. They should focus on architecture and leave the code for you to deal with. 
 
-but grug learn control passions, major difference between grug and animal
+But you need to control your passion and stay level-headed.
 
-instead grug try to limit damage of big brain developer early in project by giving them thing like UML diagram (not hurt code, probably throw away anyway) or by demanding working demo tomorrow
+Instead, try to limit damage of these developers early in a project by distracting them with things like UML diagrams (often throw away anyway) or by asking them to create a working demo.
 
-working demo especially good trick: force big brain make something to actually work to talk about and code to look at that do thing, will help big brain see reality on ground more quickly
+A working demo is an especially good trick: it forces these "big picture" developers to make something that actually works to talk about and code to look at that do the thing, will help these developers understand the real problem more quickly
 
-remember! big brain have big brain! need only be harness for good and not in service of spirit complexity demon on accident, many times seen
+You need to harness their "big picture" mentality for good and not allow them to introduce too much complexity into the codebase. I've seen it happen many too many times before.
 
-(best grug brain able to herd multiple big brain in right direction and produce many complexity demon trap crystals, large shiney rock pile awaits such grug!)
+(The best developers are able to herd many of these "big picture" developers in the right direction, and not get bogged down in complexity, leading to more money!)
 
-also sometimes call demo approach "prototype", sound fancier to project manager
+Also, it's sometimes a good idea to call a demo a "prototype", it sounds better and may be easier to sell to your project manager
 
-grug say prototype early in software making, especially if many big brains
+Prototype early in software development, especially if there are many senior engineers/architects on staff. 
 
-Testing
+# TODO: Testing
 grug have love/hate relationship with test: test save grug many, many uncountable time and grug love and respect test
 
 unfortunately also many test shamans exist. some test shaman make test idol, demand things like "first test" before grug even write code or have any idea what grug doing domain!
