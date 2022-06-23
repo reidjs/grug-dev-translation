@@ -1,3 +1,5 @@
+⚠️ This translation is not yet finished! (give me a week or two)
+
 # Grug Dev Translation
 The content at https://grugbrain.dev/ translated to plain english, line by line.
 
