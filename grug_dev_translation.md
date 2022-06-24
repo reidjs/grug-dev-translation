@@ -15,7 +15,7 @@ However, many more THINK they are intelligent developers, however they probably 
 
 It's fine!
 
-It's a free country, and at the end of day it doesn't really matter, but I hope you enjoy this. I have made many mistakes over my career.
+It's a free country (sort of), and at the end of the day it doesn't really matter, but I hope you enjoy this. I have made many mistakes over my career.
 
 The Eternal Enemy: Complexity
 The worst thing about programming is complexity. 
