@@ -1,15 +1,15 @@
 The Grug Brained Developer - English Translation
 A guide to thinking like a senior software engineer
 # Introduction
-this collection of thoughts on software development gathered by a senior software developer
+A collection of thoughts on software development gathered by a senior software developer
 
-Senior software developer is not very smart, but he has been a developer for a long time and has learned some things. However, the field is still rapidly changing.
+I'm not very smart, but I have been in the field a long time and have learned some things. However, the field is still rapidly changing.
 
-The senior software engineer tries to collect their learnings into a small, easily digestible and funny page, not only for you, the junior software engineer, but also for him because as he gets older he forgets important things, like what he had for breakfast or if he put his pants on.
+I've tried to collect my learnings into a small, easily digestible and funny page, not only for you, a software engineer earlier in your career, but also for myself, because as I age I start to forget important things, like what I had for breakfast or whether or not I put my pants on.
 
-There are many intelligent developers, and some are not expected to like this, or agree with this.
+There are many intelligent developers who may not like this, or may disagree with parts of this.
 
-However, many more THINK they are intelligent developers, however they probably are not, and they probably won't agree with this.
+However, many more who THINK they are intelligent developers, who actually probably are not, probably won't agree with this.
 
 (I used to think I was intelligent, but I learned the hard way I am not)
 
@@ -32,9 +32,9 @@ Complexity is very, very bad.
 
 Given the choice between complexity or fighting one on one against a T-Rex, I would take the T-Rex: at least I can SEE the T-Rex.
 
-Complexity is a terrible problem that enters the codebase through well-meaning but ultimately very avoidable non unintelligent developers and project managers who do not fear the complexity problem or even know about it.
+Complexity is a terrible problem that enters the codebase through well-meaning but unintelligent developers and project managers who do not fear the complexity problem or even know about it.
 
-One day the codebase is understandable, and I can get work done, everythings good!
+One day the codebase is understandable, and I can get work done, everything's good!
 
 The next day, it's impossible: complexity has entered the code and you're in a very difficult situation!
 
@@ -55,7 +55,7 @@ The best tool against complexity is learning to say "no."
 
 "No, I wil not build that abstraction."
 
-"No, I will not shower every day or drink less coffee so stop requesting."
+"No, I will not shower every day or drink less coffee so stop asking."
 
 Note, this is good engineering advice, but bad career advice. "Yes" may help you chase promotion and management opportunities.
 
@@ -110,49 +110,49 @@ Also, it's sometimes a good idea to call a demo a "prototype", it sounds better 
 
 Prototype early in software development, especially if there are many senior engineers/architects on staff. 
 
-# TODO: Testing
-grug have love/hate relationship with test: test save grug many, many uncountable time and grug love and respect test
+# Testing
+I have a love/hate relationship with testing: testing has saved me many, many times before and I love and respect tests.
 
-unfortunately also many test shamans exist. some test shaman make test idol, demand things like "first test" before grug even write code or have any idea what grug doing domain!
+Unfortunately, many "test shamans" exist. Some "test shamans make tests their idol, demanding things like "always test first" before you even write code, or have any idea about the business domain!
 
-how grug test what grug not even understand domain!?
+how can I write a test when I don't even understand the problem or business domain!?
 
-"Oh, don't worry: the tests will show you what you need to do."
+They say, "Oh, don't worry: the tests will show you what you need to do."
 
-grug once again catch grug slowly reaching for club, but grug stay calm
+This is infuriating, but stay calm.
 
-grug instead prefer write most tests after prototype phase, when code has begun firm up
+Instead, write tests after the prototyping phase, when code has begun to prove itself.
 
-but, note well: grug must here be very disciplined!
+But, take note: you must be very disciplined!
 
-easy grug to move on and not write tests because "work on grugs machine"!
+It's easy to move on and not write tests because it "works on your machine"!
 
-this very, very bad: no guarantee work on other machine and no guarantee work on grug machine in future, many times
+This is very, very bad: there's no guarantee it will work on other people's machines and no guarantee it will work on your machine in the future. This has happened to me many times before.
 
-test shaman have good point on importance of test, even if test shaman often sometimes not complete useful feature in life and talk only about test all time, deserve of club but heart in right place
+"Test shamans" have a good point on the importance of tests, even if sometimes they don't ship a useful feature in their life and only talk about testing all time. They need to learn more, but their heart is in the right place.
 
-also, test shaman often talk unit test very much, but grug not find so useful. grug experience that ideal tests are not unit test or either end-to-end test, but in-between test
+Also, "test shamans" often talk about unit tests a lot, but sometimes these are not so useful. In my experience the ideal tests are neither full unit test coverage nor full end-to-end test coverage, but somewhere in-between.
 
-unit tests fine, ok, but break and make refactor hard as API change and, frankly, not too useful many bugs anyway often, often throw away when code change. write unit test mostly at start of project help get things going but not get too attached
+Unit tests are fine, but often break and make refactoring hard at the beginning as APIs change and, frankly, they don't catch many bugs, and are often thrown away when code changes. Write unit tests at the start of project to get things going, but don't get too attached.
 
-end to end tests good, show whole system work, but! hard to understand when break and drive grug crazy very often, sometimes grugs just end up ignoring because "oh, that break all time" very bad!
+End to end tests are good, they show how the whole system works, but are hard to understand when they break and sometimes drive me crazy, to the point where I end up ignoring them because "oh, that test breaks all time!" This is very bad. 
 
-in-between tests, grug hear shaman call "integration tests" sometime often with sour look on face. but grug say integration test sweet spot according to grug: high level enough test correctness of system, low level enough, with good debugger, easy to see what break
+In-between tests, often called "integration tests" sometimes annoy me. But integration tests are the sweet spot: high level enough to test the correctness of the system, but low level enough to see what breaks (with a good debugger).
 
-grug prefer some unit tests especially at start but not 100% all code test and definitely not first test. many more focus ferocious integration test as cut point emerge and system stabilize! also small, curated end-to-end test suite that is kept working religiously on pain of clubbing. focus of important end-to-end test on most common UI features and few most important edge cases, but not too many or become impossible maintain
+I prefer some unit tests at the start, but not 100% code coverage. I more focus more on integration tests as cut points emerge and the system stabilizes! Also small, curated end-to-end test suites (smoke tests?) that keep the system working. Focus end-to-end tests on the most common UI features and a few of the most important edge cases, but not too many, or it will become impossible to maintain.
 
-this ideal set of test to grug
+This is the ideal set of tests in my opinion.
 
-you may not like, but this peak grug testing
+You may disagree, but this is the best form of testing in my opinion. 
 
-also, grug think mocking make mockery of testing no prefer only when have to (rare/never) and coarse grain mocking only at that
+Also, I think mocking tests are not valuable and if you must only do "coarse grain" mocking.
 
-Agile
-grug think agile not terrible, not good
+# Agile
+I have mixed feelings about agile.
 
-end of day, not worst way to organize development, maybe better than others grug supposes is fine
+At the end of the day, it's not the worst way to organize development, and it's better than many other ways.
 
-danger, however, is agile shaman! many, many shiney rock lost to agile shaman!
+TODO: danger, however, is agile shaman! many, many shiney rock lost to agile shaman!
 
 whenever project fail, agile shaman say "you didn't do agile right!" grug note this awfully convenient for agile shaman, ask more shiney rock better agile train young grugs on agile, danger!
 
