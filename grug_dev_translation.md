@@ -2,7 +2,7 @@
 A guide to thinking like a software engineer, translated to plain english from [https://grugbrain.dev/](https://grugbrain.dev/)
 
 # Introduction
-A collection of thoughts on software development gathered by a software developer
+A collection of thoughts on software development gathered by a software developer.
 
 I'm not very smart, but I have been in the field a long time and have learned some things. However, the field is still rapidly changing.
 
@@ -176,44 +176,44 @@ Also I have noticed that introducing too much abstraction often leads the refact
 
 Another good example is when a company I worked for introduced OSGi to help manage complexity in the codebase. Not only is OSGi not much help, but it increased our codebase's complexity! It took multiple man years of our best developers to rework it as well! The increased complexity made new features impossible to implement! This is very bad!
 
-# TODO: Chesterton's Fence
-wise grug shaman chesterton once say
+# Chesterton's Fence
+A wise developer named Chesterton once said:
 
-here exists in such a case a certain institution or law; let us say, for the sake of simplicity, a fence or gate erected across a road. The more modern type of reformer goes gaily up to it and says, “I don’t see the use of this; let us clear it away.” To which the more intelligent type of reformer will do well to answer: “If you don’t see the use of it, I certainly won’t let you clear it away. Go away and think. Then, when you can come back and tell me that you do see the use of it, I may allow you to destroy it.”
+"Here exists in such a case a certain institution or law; let us say, for the sake of simplicity, a fence or gate erected across a road. The more modern type of reformer goes gaily up to it and says, “I don’t see the use of this; let us clear it away.” To which the more intelligent type of reformer will do well to answer: “If you don’t see the use of it, I certainly won’t let you clear it away. Go away and think. Then, when you can come back and tell me that you do see the use of it, I may allow you to destroy it.”
 
-many older grug learn this lesson well not start tearing code out willy nilly, no matter how ugly look
+Many older developers learn this lesson to not start tearing code out willy-nilly, no matter how ugly it looks.
 
-grug understand all programmer platonists at some level wish music of spheres perfection in code. but danger is here, world is ugly and gronky many times and code also must so be
+All "programmer platonists" at some level wish for perfection in code. But there's danger here, the world is ugly and imperfect and many times and code must also be. 
 
-humility not often come big brained or think big brained easily or grug even, but grug often find "oh, grug no like look of this, grug fix" lead many hours pain grug and no better or system worse even
+Humility does not come easily, but I often find "oh, I don't like the look of this, I'll fix it" leads to many hours of pain, no improvements, and makes the system worse.
 
-grug early on in career often charge into code base waving club wildly and smash up everything, learn not good
+I learned early on in my career that charging into the codebase making drastic changes and trying to fix everything is not a good idea.
 
-grug not say no improve system ever, quite foolish, but recommend take time understand system first especially bigger system is and is respect code working today even if not perfect
+I'm not saing never improve the system, that's quite foolish, but I recommend taking some time to understand the system first, especially if the system is big and always respect code working today, even if it's not perfect.
 
-here tests often good hint for why fence not to be smashed!
+Here, tests are often a good hint for why you should not smash the fence!
 
-Microservices
-grug wonder why big brain take hardest problem, factoring system correctly, and introduce network call too
+# Microservices
+I wonder why some "big brain" developers take the hardest problem, factoring the system correctly, and introduce a network call between subsystems.
 
-seem very confusing to grug
+Seem very confusing to me.
 
-Tools
-grug love tool. tool and control passion what separate grug from dinosaurs! tool allow grug brain to create code that not possible otherwise by doing thinking for grug, always good relief! grug always spend time in new place learning tools around him to maximize productivity: learn tools for two weeks make development often twice faster and often have dig around ask other developers help, no docs
+# Tools
+I love tooling. Passion for tooling and control separate us from the dinosaurs! Tooling allows us to create code that would not be possible otherwise by doing some of the thinking for us! I always spend time in a new place learning the tools to maximize productivity: learn tools for two weeks to make development twice as fast and avoid having to dig around asking other developers for help or consulting documentation.
 
-code completion in IDE allow grug not have remembered all API very important!
+Code completion in IDE allows you to not remember the entire API, this is very important!
 
-java programming nearly impossible without it for grug!
+Java programming is nearly impossible without it!
 
-really make grug think some time
+It really makes me think sometimes.
 
-good debugger worth weight in shiney rocks, in fact also more: when faced with bug grug would often trade all shiney rock and perhaps few children for good debugger and anyway debugger no weigh anything far as grug can tell
+A good debugger is worth its weight in gold, maybe even more: when faced with a bug, I would often trade all my money and perhaps a few children for a good debugger. Anyways, a debugger doesn't weigh anything as far as I can tell.
 
-grug always recommend new programmer learn available debugger very deeply, features like conditional break points, expression evaluation, etc
+I recommend new programmers learn their available debugger very deeply, features like conditional break points, expression evaluation, etc.
 
-grug say never be not improving tooling
+Always be improving your tooling.
 
-Type Systems
+# TODO: Type Systems
 grug very like type systems make programming easier. for grug, type systems most value when grug hit dot on keyboard and list of things grug can do pop up magic. this 90% of value of type system or more to grug
 
 but beware big brains here!
