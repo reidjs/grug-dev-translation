@@ -1,7 +1,8 @@
-The Grug Brained Developer - English Translation
-A guide to thinking like a senior software engineer
+# The Grug Brained Developer - English Translation
+A guide to thinking like a software engineer, translated to plain english from [https://grugbrain.dev/](https://grugbrain.dev/)
+
 # Introduction
-A collection of thoughts on software development gathered by a senior software developer
+A collection of thoughts on software development gathered by a software developer
 
 I'm not very smart, but I have been in the field a long time and have learned some things. However, the field is still rapidly changing.
 
@@ -17,7 +18,7 @@ It's fine!
 
 It's a free country, and at the end of day it doesn't really matter, but I hope you enjoy this. I have made many mistakes over my career.
 
-The Eternal Enemy: Complexity
+# The Eternal Enemy: Complexity
 The worst thing about programming is complexity. 
 
 Complexity is bad.
@@ -152,30 +153,30 @@ I have mixed feelings about agile.
 
 At the end of the day, it's not the worst way to organize development, and it's better than many other ways.
 
-TODO: danger, however, is agile shaman! many, many shiney rock lost to agile shaman!
+Agile fanatics are dangerous! Lots of money has been lost to agile fanatics!
 
-whenever project fail, agile shaman say "you didn't do agile right!" grug note this awfully convenient for agile shaman, ask more shiney rock better agile train young grugs on agile, danger!
+Whenever a project fails, agile fanatics say "you didn't do agile right!" This is awfully convenient for the agile fanatic, because they will ask for more money to better agile train young developers on agile.
 
-grug tempted reach for club when too much agile talk happen but always stay calm
+It's easy to lose your cool when too much agile talk is happening, but stay calm. 
 
-prototyping, tools and hiring good grugs better key to success software: agile process ok and help some but sometimes hurt taken too seriously, never silver club no matter what agile shaman say (danger!)
+Prototyping, tooling and hiring good developers is they key to building good software: the agile process is ok and helps some, but can impede progress if taken too seriously.
 
-Refactoring
-refactoring fine activity and often good idea, especially later in project when code firmed up
+# Refactoring
+Refactoring is fine and often a good idea, especially later in project when the code has firmed up.
 
-however, grug note that many times in career "refactors" go horribly off rails and end up causing more harm than good
+However, many times in my career, "refactors" have gone horribly off track and cause more harm than good.
 
-grug not sure exactly why some refactors work well, some fail, but grug notice that larger refactor, more likely failure appear to be
+I'm not sure exactly why some refactors work well, some fail, but the larger the refactor, the more likely failure will occur.
 
-so grug try to keep refactors relatively small and not be "too far out from shore" during refactor. ideally system work entire time and each step of finish before other begin.
+So try to keep refactors relatively small and never be "too far out from shore" during a refactor. Ideally, the system will work the entire time, and you will finish each step before the next begins.
 
-end-to-end tests are life saver here, but often very hard understand why broke... such is refactor life.
+End-to-end tests are a life saver here, but it is often very hard understand why they broke after changing something... such is refactoring.
 
-also grug notice that introducing too much abstraction often lead to refactor failure and system failure. good example was J2EE introduce, many big brain sit around thinking too much abstraction, nothing good came of it many project hurt
+Also I have noticed that introducing too much abstraction often leads the refactor to fail. A good example was the J2EE introduction, many "big brained" developers sat around thinking too much about abstraction, and nothing good came of it.
 
-another good example when company grug work for introduce OSGi to help manage/trap spriit complexity demon in code base. not only OSGi not help, but make complexity demon much more powerful! took multiple man year of best developers to rework as well to boot! more complex spirit and now features impossible implement! very bad!
+Another good example is when a company I worked for introduced OSGi to help manage complexity in the codebase. Not only is OSGi not much help, but it increased our codebase's complexity! It took multiple man years of our best developers to rework it as well! The increased complexity made new features impossible to implement! This is very bad!
 
-Chesterton's Fence
+# TODO: Chesterton's Fence
 wise grug shaman chesterton once say
 
 here exists in such a case a certain institution or law; let us say, for the sake of simplicity, a fence or gate erected across a road. The more modern type of reformer goes gaily up to it and says, “I don’t see the use of this; let us clear it away.” To which the more intelligent type of reformer will do well to answer: “If you don’t see the use of it, I certainly won’t let you clear it away. Go away and think. Then, when you can come back and tell me that you do see the use of it, I may allow you to destroy it.”

@@ -1,5 +1,6 @@
 The Grug Brained Developer
 A layman's guide to thinking like the self-aware smol brained
+
 Introduction
 this collection of thoughts on software development gathered by grug brain developer
 
