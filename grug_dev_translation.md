@@ -1,5 +1,5 @@
 # The Grug Brained Developer - English Translation
-A guide to thinking like a software engineer, translated to plain english from [https://grugbrain.dev/](https://grugbrain.dev/)
+## A guide to thinking like a software engineer, translated to plain english from [https://grugbrain.dev/](https://grugbrain.dev/)
 
 # Introduction
 A collection of thoughts on software development gathered by a software developer.
