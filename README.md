@@ -22,3 +22,45 @@ This uses pandoc to create an HTML website from the markdown in [grug_dev_transl
     <abbr title="The Grug Brained Developer">The Grug Brained Developer - English Translation</abbr>
     ```
     might work on mobile
+- [ ] Add HTML template in order to use the styling of the original site
+```css
+body {
+    margin: 40px auto;
+    max-width: 768px;
+    line-height: 1.6;
+    font-size: 20px;
+    color: #444;
+    padding: 0 10px;
+}
+
+pre {
+    font-size: 16px;
+}
+
+h1, h2, h3 {
+    line-height: 1.2
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+h1 a {
+    color: #444;
+}
+
+h2 a {
+    color: #444;
+}
+```

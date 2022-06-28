@@ -250,7 +250,7 @@ over time grug learn this hard debug, learn prefer write like so:
     }
   }
 
-  
+
 grug hear screams from young grugs at horror of many line of code and pointless variable and grug prepare defend self with club
 
 club fight start with other developers attack and grug yell: "easier debug! see result of each expression more clearly and good name! easier understand conditional expression! EASIER DEBUG!"
@@ -403,5 +403,6 @@ grug like these:
 
 Worse is Better
 A Philosophy of Software Design
+
 Conclusion
 complexity very, very bad
