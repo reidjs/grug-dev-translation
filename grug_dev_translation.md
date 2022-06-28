@@ -213,31 +213,35 @@ I recommend new programmers learn their available debugger very deeply, features
 
 Always be improving your tooling.
 
-# TODO: Type Systems
-grug very like type systems make programming easier. for grug, type systems most value when grug hit dot on keyboard and list of things grug can do pop up magic. this 90% of value of type system or more to grug
+# Type Systems
+Type systems make programming easier. Type systems are most valuable when you hit the period key on your keyboard and it lists all the relevant methods, like magic. This attributes 90% of the value a type system gives you. 
 
-but beware big brains here!
+But beware of "big brains" here!
 
-some type big brain think in type systems and talk in lemmas, can be very dangerous!
+Some "big brains" think in type systems and talk in lemmas, which can be very dangerous!
 
-big brain type system shaman often say type correctness main point type system, but grug note big brain type system shaman not often ship code. grug suppose code never shipped is correct, in some sense, but not really what grug mean when say correct!
+"Big brain type-system shamans" will say that type correctness is the main point of the type system, but note these developers rarely ship code. Code never shipped is correct, in some sense, but not that's not really the point!
 
-also danger abstraction too high, and big brain code become astral projection of platonic generic turing model of computation into code base. grug confused and agree some level very elegant but also very hard do anything like record number of club inventory for Grug Inc. task at hand
+There is a danger of over-abstraction here, and "big brain" code becomes too detached from reality. This can be difficult to understand, on some level it is very elegant, but it becomes hard to do basic things like track inventory, or solve the task at hand. 
 
-generics especially dangerous here, grug try limit generics to container classes for most part where most value add
+Generics are especially dangerous here, try to limit generics to container classes for most part where they add the most value. 
 
-temptation generics very large is trick! spirit demon complex love this one trick! beware!
+Beware the temptation of generics! They can add a lot of complexity! Beware!
 
-always most value type system come: hit dot see what grug can do, never forget!
+Never forget that most of the value of the type system comes from hitting period to see what you can do.
 
-Expression Complexity
-grug once like to minimize lines of code much as possible. write code like this:
+# Expression Complexity
+I used to minimize lines of code much as possible. I would write code like this:
 
+  ```
   if(contact && !contact.isActive() && (contact.inGroup(FAMILY) || contact.inGroup(FRIENDS))) {
     // ...
   }
-over time grug learn this hard debug, learn prefer write like so:
+  ```
 
+Over time I learned this was hard to debug, so now I prefer to write like so:
+
+```
   if(contact) {
     var contactIsInactive = !contact.isActive();
     var contactIsFamilyOrFriends = contact.inGroup(FAMILY) || contact.inGroup(FRIENDS);
@@ -245,157 +249,160 @@ over time grug learn this hard debug, learn prefer write like so:
         // ...
     }
   }
-grug hear screams from young grugs at horror of many line of code and pointless variable and grug prepare defend self with club
+```
 
-club fight start with other developers attack and grug yell: "easier debug! see result of each expression more clearly and good name! easier understand conditional expression! EASIER DEBUG!"
+Junior developers will complain about excessive lines of code and pointless variables you must be prepared to defend the code. 
 
-definitely easier debug and once club fight end calm down and young grug think a bit, they realize grug right
+Explain that it makes the code easier to debug, you see the result of each expression more clearly, it is easier to understand the conditional, and it's EASIER TO DEBUG!
 
-grug still catch grug writing code like first example and often regret, so grug not judge young grug
+Once they realize it is definitely easier to debug they will realize you are right.
 
-Closures
-grug like closures for right job and that job usually abstracting operation over collection of objects
+I still catch myself writing code like the first example and often regret it, so don't judge junior developers.
 
-grug warn closures like salt, type systems and generics: small amount go long way, but easy spoil things too much use give heart attack
+# Closures
+Closures are good for abstracting operations over collections of objects.
 
-javascript developers call very special complexity demon spirit in javascript "callback hell" because too much closure used by javascript libraries very sad but also javascript developer get what deserved let grug be frank
+Closures are like salt, type systems, and generics: a small amount goes a long way, but it's easy to spoil things from overuse.
 
-Logging
-grug huge fan of logging and encourage lots of it, especially in cloud deployments. some non-grugs say logging expensive and not important. grug used think this way no more
+JavaScript developers can fall into "callback hell" from too many closures used by javascript libraries. It's very sad, but they get what they deserve to be frank.
 
-funny story: grug learn idol rob pike working on logging at google and decide: "if rob pike working on logging, what grug do there?!?" so not pursue. turn out logging very important to google so of course best programmer work on it, grug!
+# Logging
+I'm a huge fan of logging and encourage lots of it, especially in cloud deployments. some people say logging is expensive and not important. I used think this way, but not any more.
 
-don't be such grug brain, grug, much less shiney rock now!
+Funny story: I learned my idol [Rob Pike](https://en.wikipedia.org/wiki/Rob_Pike) was working on logging at Google and decided: "If Rob Pike is working on logging, what would I do there?!?" so I didn't pursue that career choice. It turns out logging is very important to google, so of course one of their best programmers work on it!
 
-oh well, grug end up at good company anyway and rob pike dress habit increasingly erratic, so all work out in end, but point stand: logging very important!
+Don't be such "grug brain," I could have made much more money if I had worked at Google!
 
-grug tips on logging are:
+Oh well, I ended up at a good company anyways, and Rob Pike's fashion style became increasingly erratic, so it all worked out in the end, but my point stands: logging is very important!
 
-log all major logical branches within code (if/for)
-if "request" span multiple machine in cloud infrastructure, include request ID in all so logs can be grouped
-if possible make log level dynamically controlled, so grug can turn on/off when need debug issue (many!)
-if possible make log level per user, so can debug specific user issue
-last two points are especially handy club when fighting bugs in production systems very often
+My tips on logging are:
 
-unfortunately log libraries often very complex (java, why you do?) but worth investing time in getting logging infrastructure "just right" pay off big later in grug experience
+1. Log all major logical branches within code (if/for)
+2. If a "request" spans multiple machines in cloud infrastructure, include the request ID in all of them so logs can be grouped.
+3. If possible, make log level dynamically controlled, so you can turn on/off when needed to debug an issue.
+4. If possible, make log level per user, so you can debug specific user issues.
+The last two points are especially handy when fighting bugs in production systems.
 
-logging need taught more in schools, grug think
+Unfortunately, log libraries are often very complex (e.g., in Java), but it is worth investing time in getting logging infrastructure "just right." It will pay off big later in my experience
 
-Concurrency
-grug, like all sane developer, fear concurrency
+Logging needs to be taught more in schools, I think.
 
-as much as possible, grug try to rely on simple concurrency models like stateless web request handlers and simple remote job worker queues where jobs no interdepend and simple api
+# Concurrency
+I, like all sane developers, fear concurrency.
 
-optimistic concurrency seem work well for web stuff
+As much as possible, I try to rely on simple concurrency models like stateless web request handlers and simple remote job worker queues where jobs do not interdepend on each other and have a simple API.
 
-occasionally grug reach for thread local variable, usually when writing framework code
+Optimistic concurrency seems to work well for web stuff.
 
-some language have good concurrent data structure, like java ConcurrentHashMap but still need careful grug work to get right
+Occasionally I thread local variables, usually when writing framework code.
 
-grug has never used erlang, hear good things, but language look wierd to grug sorry
+Some languages have good concurrent data structures, like Java's ConcurrentHashMap, but still need to be careful to get it right.
 
-APIs
-grug love good apis. good apis not make grug think too much
+I have never used Erlang, I hear good things, but the language looks weird to me, sorry.
 
-unfortunately, many apis very bad, make grug think quite a bit. this happen many reasons, here two:
+# APIs
+I love good APIs. Good APIs allow me to think less.
 
-API creators think in terms of implementation or domain of API, rather than in terms of use of API
-API creators think too abstract and big brained
-usually grug not care too deeply about detail of api: want write file or sort list or whatever, just want to call write() or sort() or whatever
+Unfortunately, many APIs are very bad, and make me think quite a bit. This happens for many reasons, here are two:
 
-but big brain api developers say:
+API creators think in terms of implementation or their API domain, rather than how the API will be used.
+API creators think too abstractly and are "big brained"
+Usually I don't care about the details of the API: I want to write files or sort a list, or whatever, i.e., I just want to call write() or sort().
 
-"not so fast, grug! is that file open for write? did you define a Comparator for that sort?"
+But "big brained" API developers say:
 
-grug find self restraining hand reaching for club again
+"not so fast! Is that file open for write? Did you define a Comparator for that sort?"
 
-not care about that stuff right now, just want sort and write file mr big brain!
+I have to restrain myself.
 
-grug recognize that big brain api designer have point and that sometime these things matter, but often do not. big brain api developers better if design for simple cases with simple api, make complex cases possible with more complex api
+I do not care about that stuff right now, I just want to sort and write to the file!
 
-grug call this "layering" apis: two or three different apis at different level complexity for various grug needs
+I recognize that "big brain" API designers have a point, and sometimes these things matter, but often they do not. It's better to design simple cases to work with a simple API and make complex cases possible with a more complex API.
 
-also, if object oriented, put api on thing instead of elsewhere. java worst at this!
+I call this "layering" APIs: two or three different apis at different level complexity for various devleopment needs.
 
-grug want filter list:
+Also, if it's object oriented, put the API on the object instead of somewhere else. Java is the worst at this!
+
+For example, let's say I want to filter a list:
 
 "Did you convert it to a stream?"
 
-fine, grug convert to stream
+Fine, I'll convert it to a stream.
 
 "OK, now you can filter."
 
-OK, but now need return list! have stream!
+OK, but now need a return list! Have a stream!
 
 "Did you collect it in a list?"
 
-grug hand reaching for club yet again, control
+At this point I'm starting to lose my temper, but stay calm.
 
-put common thing like filter() on list and make return list big brain java api developer!
+Put a common thing like filter() on a list and make it return a list!
 
-nobody care about "stream" or even hear of "stream" before, is not networking api big brain! all java developer use list!
+Nobody cares about a "stream" or has even heard of a "stream" before, it's not a networking API! All java developers use lists!
 
-Front End Development
-some non-grugs, when faced with web development say:
+# Front End Development
+Some less experienced developers, when faced with web development say:
 
 "I know, I'll split my front end and back end codebase up and use a hot new SPA library talking to a GraphQL JSON API back end over HTTP (which is funny because I'm not transferring hypertext)"
 
-now you have two complexity demon spirit lairs
+Now you have two additional sources of complexity.
 
-and, what is worse, front end complexity demon spirit even more powerful and have deep spiritual hold on entire front end industry as far as grug can tell
+And, what's worse, front end complexity is very bad and has a hold on the entire front end industry as far as I can tell.
 
-back end developers try keep things simple and can work ok, but front end developers make very complex very quickly and introduce lots of code, demon complex spirit
+Back end developers try keep things simple and can work ok, but front end developers add complexity very quickly and introduce lots of useless code.
 
-even when website just need put form into database or simple brochure site!
+Even when websites just need to put a form into a database or are a simple brochure website!
 
-everyone do this now!
+Everyone does this now!
 
-grug not sure why except maybe facebook and google say so, but that not seem very good reason to grug
+I'm not sure why, except maybe because facebook and google say so, but that doesn't seem like a very good reason to me.
 
-grug not like big complex front end libraries everyone use
+I do not like big complex front end libraries that everyone uses.
 
-grug make htmx and hyperscript to avoid
+To avoid this, I use [htmx](https://htmx.org/) and [hyperscript](https://hyperscript.org/) mainly.
 
-keep complexity low, simple HTML, avoid lots javascript, the natural ether of spirit complexity demon
+Keep complexity low, use simple HTML, avoid lots of javascript.
 
-maybe they work for you, but no job post, sorry
+Maybe they work for you, but there are no job postings, sorry.
 
-react better for job and also some type application, but also you become alcolyte of complexity demon whether you like or no, sorry such is front end life
+React is better for finding a job and for certain types of applications, but also you succumb to complexity whether you like it or not, sorry, such is front end life.
 
-Fads
-grug note lots of fads in development, especially front end development today
+# Fads
+There are lots of fads in development, especially in front end development today.
 
-back end better more boring because all bad ideas have tried at this point maybe (still retry some!)
+Back end is better, it's more boring because all the bad ideas have already been tried at this point, maybe (still, we should retry some!)
 
-still trying all bad ideas in front end development so still much change and hard to know
+They are still trying all the bad ideas in front end development, so there's still a lot of change and it's hard to know what to do. 
 
-grug recommend taking all revolutionary new approach with grain salt: big brains have working for long time on computers now, most ideas have tried at least once. grug not saying can't learn new tricks or no good new ideas, but also much of time wasted on recycled bad ideas, lots of spirit complexity demon power come from putting new idea willy nilly into code base
+I recommend taking all revolutionary new approaches with a grain of salt: "big brains" have been working on computers for a long time now, most ideas have been tried at least once. I'm not saying we can't learn new tricks or there are no good new ideas, but so much time is wasted on recycled bad ideas, lots of complexity comes from putting new ideas willy nilly into your codebase.
 
-note! very good if senior grug willing to say publicly: "hmmm, this too complex for grug"!
+Note: it's very good if senior developers are willing to publicly say: "hmmm, this is too complex for me!"
 
-many developers Fear Of Looking Dumb (FOLD), grug also at one time fold, but grug learn get over: important senior grug say "this too complicated and confuse" this make it ok for junior grugs to admit too complex not understand as well! FOLD major source of complexity demon power over developer, especially younger grugs!
+Many developers have a Fear Of Looking Dumb (FOLD), I also at one time suffered from FOLD, but learned to get over it: It's important that senior developers say "this is too complicated and confusing," this makes it ok for junior developers to admit it's too complex not understandable as well! FOLD can cause unnecessary complexity to enter your code, and is especially dangerous for younger developers.
 
-take FOLD power away, very good senior grug!
+A very good senior developer will take FOLD's power away.
 
-note: important to make thinking face and look big brained when saying though. be prepare for big brain or, worse and much more common, thinks is big brain to make fun. be strong! no fold! club sometimes useful here, but more often sense of humor and especially last failed project by big brain very useful, so collect
+Note: it's important to make a "thinking face" and look "big brained" when admitting you don't understand something. Be prepareed for a "big brain" or someone who thinks they are a "big brain" to make fun of you. Be strong! no FOLD! It's important to have a sense of humor, especially if you can point to the last failed project by "big brain," so collect these. 
 
-Impostor Syndrome
-grug note many such impostor feels in development
+# Impostor Syndrome
+Often times, you will feel like an impostor during software development.
 
-always grug one of two states: grug is ruler of all survey, wield code club like thor OR grug have no idea what doing
+You are usually in one of two states: I'm the ruler of all I survey, wielding a code club like thor OR I have no idea what doing
 
-grug is mostly latter state most times, hide it pretty well though
+I'm in the latter state most times, but I hide it pretty well.
 
-now, grug make softwares of much work and moderate open source success, and yet grug himself often feel not any idea what doing! very often! fear make mistake break everyone code and disappoint other grugs!
+Now, I have made much working software and have had moderate open source success, yet I often feel like I have no idea what I'm doing! Very often! I fear I'll make a mistake and break everyone's code and disappoint other developers!
 
-is maybe nature of programming for most and be ok with is best, nobody imposter if everybody imposter
+Maybe it's the nature of programming for the most part and being ok with that is best, nobody's an imposter if everybody's an imposter.
 
-any young grug read this far probably do fine in program career even if frustrations and worry is always to be there, sorry
+Any young developer who has read this far probably will do fine in a programming career even if frustrations and worry will always be there, sorry.
 
-Reads
-grug like these:
+# Reads
+I like these:
 
-Worse is Better
-A Philosophy of Software Design
-Conclusion
-complexity very, very bad
+- Worse is Better
+- A Philosophy of Software Design
+
+# Conclusion
+Complexity is very, very bad.
