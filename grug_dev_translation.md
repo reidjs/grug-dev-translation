@@ -1,15 +1,16 @@
-The Grug Brained Developer - English Translation
-A guide to thinking like a senior software engineer
+# The Grug Brained Developer - English Translation
+## A guide to thinking like a software engineer, translated to plain english from [https://grugbrain.dev/](https://grugbrain.dev/)
+
 # Introduction
-this collection of thoughts on software development gathered by a senior software developer
+A collection of thoughts on software development gathered by a software developer.
 
-Senior software developer is not very smart, but he has been a developer for a long time and has learned some things. However, the field is still rapidly changing.
+I'm not very smart, but I have been in the field a long time and have learned some things. However, the field is still rapidly changing.
 
-The senior software engineer tries to collect their learnings into a small, easily digestible and funny page, not only for you, the junior software engineer, but also for him because as he gets older he forgets important things, like what he had for breakfast or if he put his pants on.
+I've tried to collect my learnings into a small, easily digestible and funny page, not only for you, a software engineer earlier in your career, but also for myself, because as I age I start to forget important things, like what I had for breakfast or whether or not I put my pants on.
 
-There are many intelligent developers, and some are not expected to like this, or agree with this.
+There are many intelligent developers who may not like this, or may disagree with parts of this.
 
-However, many more THINK they are intelligent developers, however they probably are not, and they probably won't agree with this.
+However, many more who THINK they are intelligent developers, who actually probably are not, probably won't agree with this.
 
 (I used to think I was intelligent, but I learned the hard way I am not)
 
@@ -17,7 +18,7 @@ It's fine!
 
 It's a free country (sort of), and at the end of the day it doesn't really matter, but I hope you enjoy this. I have made many mistakes over my career.
 
-The Eternal Enemy: Complexity
+# The Eternal Enemy: Complexity
 The worst thing about programming is complexity. 
 
 Complexity is bad.
@@ -32,9 +33,9 @@ Complexity is very, very bad.
 
 Given the choice between complexity or fighting one on one against a T-Rex, I would take the T-Rex: at least I can SEE the T-Rex.
 
-Complexity is a terrible problem that enters the codebase through well-meaning but ultimately very avoidable non unintelligent developers and project managers who do not fear the complexity problem or even know about it.
+Complexity is a terrible problem that enters the codebase through well-meaning but unintelligent developers and project managers who do not fear the complexity problem or even know about it.
 
-One day the codebase is understandable, and I can get work done, everythings good!
+One day the codebase is understandable, and I can get work done, everything's good!
 
 The next day, it's impossible: complexity has entered the code and you're in a very difficult situation!
 
@@ -55,7 +56,7 @@ The best tool against complexity is learning to say "no."
 
 "No, I wil not build that abstraction."
 
-"No, I will not shower every day or drink less coffee so stop requesting."
+"No, I will not shower every day or drink less coffee so stop asking."
 
 Note, this is good engineering advice, but bad career advice. "Yes" may help you chase promotion and management opportunities.
 
@@ -110,133 +111,137 @@ Also, it's sometimes a good idea to call a demo a "prototype", it sounds better 
 
 Prototype early in software development, especially if there are many senior engineers/architects on staff. 
 
-# TODO: Testing
-grug have love/hate relationship with test: test save grug many, many uncountable time and grug love and respect test
+# Testing
+I have a love/hate relationship with testing: testing has saved me many, many times before and I love and respect tests.
 
-unfortunately also many test shamans exist. some test shaman make test idol, demand things like "first test" before grug even write code or have any idea what grug doing domain!
+Unfortunately, many "test shamans" exist. Some "test shamans make tests their idol, demanding things like "always test first" before you even write code, or have any idea about the business domain!
 
-how grug test what grug not even understand domain!?
+how can I write a test when I don't even understand the problem or business domain!?
 
-"Oh, don't worry: the tests will show you what you need to do."
+They say, "Oh, don't worry: the tests will show you what you need to do."
 
-grug once again catch grug slowly reaching for club, but grug stay calm
+This is infuriating, but stay calm.
 
-grug instead prefer write most tests after prototype phase, when code has begun firm up
+Instead, write tests after the prototyping phase, when code has begun to prove itself.
 
-but, note well: grug must here be very disciplined!
+But, take note: you must be very disciplined!
 
-easy grug to move on and not write tests because "work on grugs machine"!
+It's easy to move on and not write tests because it "works on your machine"!
 
-this very, very bad: no guarantee work on other machine and no guarantee work on grug machine in future, many times
+This is very, very bad: there's no guarantee it will work on other people's machines and no guarantee it will work on your machine in the future. This has happened to me many times before.
 
-test shaman have good point on importance of test, even if test shaman often sometimes not complete useful feature in life and talk only about test all time, deserve of club but heart in right place
+"Test shamans" have a good point on the importance of tests, even if sometimes they don't ship a useful feature in their life and only talk about testing all time. They need to learn more, but their heart is in the right place.
 
-also, test shaman often talk unit test very much, but grug not find so useful. grug experience that ideal tests are not unit test or either end-to-end test, but in-between test
+Also, "test shamans" often talk about unit tests a lot, but sometimes these are not so useful. In my experience the ideal tests are neither full unit test coverage nor full end-to-end test coverage, but somewhere in-between.
 
-unit tests fine, ok, but break and make refactor hard as API change and, frankly, not too useful many bugs anyway often, often throw away when code change. write unit test mostly at start of project help get things going but not get too attached
+Unit tests are fine, but often break and make refactoring hard at the beginning as APIs change and, frankly, they don't catch many bugs, and are often thrown away when code changes. Write unit tests at the start of project to get things going, but don't get too attached.
 
-end to end tests good, show whole system work, but! hard to understand when break and drive grug crazy very often, sometimes grugs just end up ignoring because "oh, that break all time" very bad!
+End to end tests are good, they show how the whole system works, but are hard to understand when they break and sometimes drive me crazy, to the point where I end up ignoring them because "oh, that test breaks all time!" This is very bad. 
 
-in-between tests, grug hear shaman call "integration tests" sometime often with sour look on face. but grug say integration test sweet spot according to grug: high level enough test correctness of system, low level enough, with good debugger, easy to see what break
+In-between tests, often called "integration tests" sometimes annoy me. But integration tests are the sweet spot: high level enough to test the correctness of the system, but low level enough to see what breaks (with a good debugger).
 
-grug prefer some unit tests especially at start but not 100% all code test and definitely not first test. many more focus ferocious integration test as cut point emerge and system stabilize! also small, curated end-to-end test suite that is kept working religiously on pain of clubbing. focus of important end-to-end test on most common UI features and few most important edge cases, but not too many or become impossible maintain
+I prefer some unit tests at the start, but not 100% code coverage. I more focus more on integration tests as cut points emerge and the system stabilizes! Also small, curated end-to-end test suites (smoke tests?) that keep the system working. Focus end-to-end tests on the most common UI features and a few of the most important edge cases, but not too many, or it will become impossible to maintain.
 
-this ideal set of test to grug
+This is the ideal set of tests in my opinion.
 
-you may not like, but this peak grug testing
+You may disagree, but this is the best form of testing in my opinion. 
 
-also, grug think mocking make mockery of testing no prefer only when have to (rare/never) and coarse grain mocking only at that
+Also, I think mocking tests are not valuable and if you must only do "coarse grain" mocking.
 
-Agile
-grug think agile not terrible, not good
+# Agile
+I have mixed feelings about agile.
 
-end of day, not worst way to organize development, maybe better than others grug supposes is fine
+At the end of the day, it's not the worst way to organize development, and it's better than many other ways.
 
-danger, however, is agile shaman! many, many shiney rock lost to agile shaman!
+Agile fanatics are dangerous! Lots of money has been lost to agile fanatics!
 
-whenever project fail, agile shaman say "you didn't do agile right!" grug note this awfully convenient for agile shaman, ask more shiney rock better agile train young grugs on agile, danger!
+Whenever a project fails, agile fanatics say "you didn't do agile right!" This is awfully convenient for the agile fanatic, because they will ask for more money to better agile train young developers on agile.
 
-grug tempted reach for club when too much agile talk happen but always stay calm
+It's easy to lose your cool when too much agile talk is happening, but stay calm. 
 
-prototyping, tools and hiring good grugs better key to success software: agile process ok and help some but sometimes hurt taken too seriously, never silver club no matter what agile shaman say (danger!)
+Prototyping, tooling and hiring good developers is they key to building good software: the agile process is ok and helps some, but can impede progress if taken too seriously.
 
-Refactoring
-refactoring fine activity and often good idea, especially later in project when code firmed up
+# Refactoring
+Refactoring is fine and often a good idea, especially later in project when the code has firmed up.
 
-however, grug note that many times in career "refactors" go horribly off rails and end up causing more harm than good
+However, many times in my career, "refactors" have gone horribly off track and cause more harm than good.
 
-grug not sure exactly why some refactors work well, some fail, but grug notice that larger refactor, more likely failure appear to be
+I'm not sure exactly why some refactors work well, some fail, but the larger the refactor, the more likely failure will occur.
 
-so grug try to keep refactors relatively small and not be "too far out from shore" during refactor. ideally system work entire time and each step of finish before other begin.
+So try to keep refactors relatively small and never be "too far out from shore" during a refactor. Ideally, the system will work the entire time, and you will finish each step before the next begins.
 
-end-to-end tests are life saver here, but often very hard understand why broke... such is refactor life.
+End-to-end tests are a life saver here, but it is often very hard understand why they broke after changing something... such is refactoring.
 
-also grug notice that introducing too much abstraction often lead to refactor failure and system failure. good example was J2EE introduce, many big brain sit around thinking too much abstraction, nothing good came of it many project hurt
+Also I have noticed that introducing too much abstraction often leads the refactor to fail. A good example was the J2EE introduction, many "big brained" developers sat around thinking too much about abstraction, and nothing good came of it.
 
-another good example when company grug work for introduce OSGi to help manage/trap spriit complexity demon in code base. not only OSGi not help, but make complexity demon much more powerful! took multiple man year of best developers to rework as well to boot! more complex spirit and now features impossible implement! very bad!
+Another good example is when a company I worked for introduced OSGi to help manage complexity in the codebase. Not only is OSGi not much help, but it increased our codebase's complexity! It took multiple man years of our best developers to rework it as well! The increased complexity made new features impossible to implement! This is very bad!
 
-Chesterton's Fence
-wise grug shaman chesterton once say
+# Chesterton's Fence
+A wise developer named Chesterton once said:
 
-here exists in such a case a certain institution or law; let us say, for the sake of simplicity, a fence or gate erected across a road. The more modern type of reformer goes gaily up to it and says, “I don’t see the use of this; let us clear it away.” To which the more intelligent type of reformer will do well to answer: “If you don’t see the use of it, I certainly won’t let you clear it away. Go away and think. Then, when you can come back and tell me that you do see the use of it, I may allow you to destroy it.”
+"Here exists in such a case a certain institution or law; let us say, for the sake of simplicity, a fence or gate erected across a road. The more modern type of reformer goes gaily up to it and says, “I don’t see the use of this; let us clear it away.” To which the more intelligent type of reformer will do well to answer: “If you don’t see the use of it, I certainly won’t let you clear it away. Go away and think. Then, when you can come back and tell me that you do see the use of it, I may allow you to destroy it.”
 
-many older grug learn this lesson well not start tearing code out willy nilly, no matter how ugly look
+Many older developers learn this lesson to not start tearing code out willy-nilly, no matter how ugly it looks.
 
-grug understand all programmer platonists at some level wish music of spheres perfection in code. but danger is here, world is ugly and gronky many times and code also must so be
+All "programmer platonists" at some level wish for perfection in code. But there's danger here, the world is ugly and imperfect and many times and code must also be. 
 
-humility not often come big brained or think big brained easily or grug even, but grug often find "oh, grug no like look of this, grug fix" lead many hours pain grug and no better or system worse even
+Humility does not come easily, but I often find "oh, I don't like the look of this, I'll fix it" leads to many hours of pain, no improvements, and makes the system worse.
 
-grug early on in career often charge into code base waving club wildly and smash up everything, learn not good
+I learned early on in my career that charging into the codebase making drastic changes and trying to fix everything is not a good idea.
 
-grug not say no improve system ever, quite foolish, but recommend take time understand system first especially bigger system is and is respect code working today even if not perfect
+I'm not saing never improve the system, that's quite foolish, but I recommend taking some time to understand the system first, especially if the system is big and always respect code working today, even if it's not perfect.
 
-here tests often good hint for why fence not to be smashed!
+Here, tests are often a good hint for why you should not smash the fence!
 
-Microservices
-grug wonder why big brain take hardest problem, factoring system correctly, and introduce network call too
+# Microservices
+I wonder why some "big brain" developers take the hardest problem, factoring the system correctly, and introduce a network call between subsystems.
 
-seem very confusing to grug
+Seem very confusing to me.
 
-Tools
-grug love tool. tool and control passion what separate grug from dinosaurs! tool allow grug brain to create code that not possible otherwise by doing thinking for grug, always good relief! grug always spend time in new place learning tools around him to maximize productivity: learn tools for two weeks make development often twice faster and often have dig around ask other developers help, no docs
+# Tools
+I love tooling. Passion for tooling and control separate us from the dinosaurs! Tooling allows us to create code that would not be possible otherwise by doing some of the thinking for us! I always spend time in a new place learning the tools to maximize productivity: learn tools for two weeks to make development twice as fast and avoid having to dig around asking other developers for help or consulting documentation.
 
-code completion in IDE allow grug not have remembered all API very important!
+Code completion in IDE allows you to not remember the entire API, this is very important!
 
-java programming nearly impossible without it for grug!
+Java programming is nearly impossible without it!
 
-really make grug think some time
+It really makes me think sometimes.
 
-good debugger worth weight in shiney rocks, in fact also more: when faced with bug grug would often trade all shiney rock and perhaps few children for good debugger and anyway debugger no weigh anything far as grug can tell
+A good debugger is worth its weight in gold, maybe even more: when faced with a bug, I would often trade all my money and perhaps a few children for a good debugger. Anyways, a debugger doesn't weigh anything as far as I can tell.
 
-grug always recommend new programmer learn available debugger very deeply, features like conditional break points, expression evaluation, etc
+I recommend new programmers learn their available debugger very deeply, features like conditional break points, expression evaluation, etc.
 
-grug say never be not improving tooling
+Always be improving your tooling.
 
-Type Systems
-grug very like type systems make programming easier. for grug, type systems most value when grug hit dot on keyboard and list of things grug can do pop up magic. this 90% of value of type system or more to grug
+# Type Systems
+Type systems make programming easier. Type systems are most valuable when you hit the period key on your keyboard and it lists all the relevant methods, like magic. This attributes 90% of the value a type system gives you. 
 
-but beware big brains here!
+But beware of "big brains" here!
 
-some type big brain think in type systems and talk in lemmas, can be very dangerous!
+Some "big brains" think in type systems and talk in lemmas, which can be very dangerous!
 
-big brain type system shaman often say type correctness main point type system, but grug note big brain type system shaman not often ship code. grug suppose code never shipped is correct, in some sense, but not really what grug mean when say correct!
+"Big brain type-system shamans" will say that type correctness is the main point of the type system, but note these developers rarely ship code. Code never shipped is correct, in some sense, but not that's not really the point!
 
-also danger abstraction too high, and big brain code become astral projection of platonic generic turing model of computation into code base. grug confused and agree some level very elegant but also very hard do anything like record number of club inventory for Grug Inc. task at hand
+There is a danger of over-abstraction here, and "big brain" code becomes too detached from reality. This can be difficult to understand, on some level it is very elegant, but it becomes hard to do basic things like track inventory, or solve the task at hand. 
 
-generics especially dangerous here, grug try limit generics to container classes for most part where most value add
+Generics are especially dangerous here, try to limit generics to container classes for most part where they add the most value. 
 
-temptation generics very large is trick! spirit demon complex love this one trick! beware!
+Beware the temptation of generics! They can add a lot of complexity! Beware!
 
-always most value type system come: hit dot see what grug can do, never forget!
+Never forget that most of the value of the type system comes from hitting period to see what you can do.
 
-Expression Complexity
-grug once like to minimize lines of code much as possible. write code like this:
+# Expression Complexity
+I used to minimize lines of code much as possible. I would write code like this:
 
+  ```
   if(contact && !contact.isActive() && (contact.inGroup(FAMILY) || contact.inGroup(FRIENDS))) {
     // ...
   }
-over time grug learn this hard debug, learn prefer write like so:
+  ```
 
+Over time I learned this was hard to debug, so now I prefer to write like so:
+
+```
   if(contact) {
     var contactIsInactive = !contact.isActive();
     var contactIsFamilyOrFriends = contact.inGroup(FAMILY) || contact.inGroup(FRIENDS);
@@ -244,157 +249,160 @@ over time grug learn this hard debug, learn prefer write like so:
         // ...
     }
   }
-grug hear screams from young grugs at horror of many line of code and pointless variable and grug prepare defend self with club
+```
 
-club fight start with other developers attack and grug yell: "easier debug! see result of each expression more clearly and good name! easier understand conditional expression! EASIER DEBUG!"
+Junior developers will complain about excessive lines of code and pointless variables you must be prepared to defend the code. 
 
-definitely easier debug and once club fight end calm down and young grug think a bit, they realize grug right
+Explain that it makes the code easier to debug, you see the result of each expression more clearly, it is easier to understand the conditional, and it's EASIER TO DEBUG!
 
-grug still catch grug writing code like first example and often regret, so grug not judge young grug
+Once they realize it is definitely easier to debug they will realize you are right.
 
-Closures
-grug like closures for right job and that job usually abstracting operation over collection of objects
+I still catch myself writing code like the first example and often regret it, so don't judge junior developers.
 
-grug warn closures like salt, type systems and generics: small amount go long way, but easy spoil things too much use give heart attack
+# Closures
+Closures are good for abstracting operations over collections of objects.
 
-javascript developers call very special complexity demon spirit in javascript "callback hell" because too much closure used by javascript libraries very sad but also javascript developer get what deserved let grug be frank
+Closures are like salt, type systems, and generics: a small amount goes a long way, but it's easy to spoil things from overuse.
 
-Logging
-grug huge fan of logging and encourage lots of it, especially in cloud deployments. some non-grugs say logging expensive and not important. grug used think this way no more
+JavaScript developers can fall into "callback hell" from too many closures used by javascript libraries. It's very sad, but they get what they deserve to be frank.
 
-funny story: grug learn idol rob pike working on logging at google and decide: "if rob pike working on logging, what grug do there?!?" so not pursue. turn out logging very important to google so of course best programmer work on it, grug!
+# Logging
+I'm a huge fan of logging and encourage lots of it, especially in cloud deployments. some people say logging is expensive and not important. I used think this way, but not any more.
 
-don't be such grug brain, grug, much less shiney rock now!
+Funny story: I learned my idol [Rob Pike](https://en.wikipedia.org/wiki/Rob_Pike) was working on logging at Google and decided: "If Rob Pike is working on logging, what would I do there?!?" so I didn't pursue that career choice. It turns out logging is very important to google, so of course one of their best programmers work on it!
 
-oh well, grug end up at good company anyway and rob pike dress habit increasingly erratic, so all work out in end, but point stand: logging very important!
+Don't be such "grug brain," I could have made much more money if I had worked at Google!
 
-grug tips on logging are:
+Oh well, I ended up at a good company anyways, and Rob Pike's fashion style became increasingly erratic, so it all worked out in the end, but my point stands: logging is very important!
 
-log all major logical branches within code (if/for)
-if "request" span multiple machine in cloud infrastructure, include request ID in all so logs can be grouped
-if possible make log level dynamically controlled, so grug can turn on/off when need debug issue (many!)
-if possible make log level per user, so can debug specific user issue
-last two points are especially handy club when fighting bugs in production systems very often
+My tips on logging are:
 
-unfortunately log libraries often very complex (java, why you do?) but worth investing time in getting logging infrastructure "just right" pay off big later in grug experience
+1. Log all major logical branches within code (if/for)
+2. If a "request" spans multiple machines in cloud infrastructure, include the request ID in all of them so logs can be grouped.
+3. If possible, make log level dynamically controlled, so you can turn on/off when needed to debug an issue.
+4. If possible, make log level per user, so you can debug specific user issues.
+The last two points are especially handy when fighting bugs in production systems.
 
-logging need taught more in schools, grug think
+Unfortunately, log libraries are often very complex (e.g., in Java), but it is worth investing time in getting logging infrastructure "just right." It will pay off big later in my experience
 
-Concurrency
-grug, like all sane developer, fear concurrency
+Logging needs to be taught more in schools, I think.
 
-as much as possible, grug try to rely on simple concurrency models like stateless web request handlers and simple remote job worker queues where jobs no interdepend and simple api
+# Concurrency
+I, like all sane developers, fear concurrency.
 
-optimistic concurrency seem work well for web stuff
+As much as possible, I try to rely on simple concurrency models like stateless web request handlers and simple remote job worker queues where jobs do not interdepend on each other and have a simple API.
 
-occasionally grug reach for thread local variable, usually when writing framework code
+Optimistic concurrency seems to work well for web stuff.
 
-some language have good concurrent data structure, like java ConcurrentHashMap but still need careful grug work to get right
+Occasionally I thread local variables, usually when writing framework code.
 
-grug has never used erlang, hear good things, but language look wierd to grug sorry
+Some languages have good concurrent data structures, like Java's ConcurrentHashMap, but still need to be careful to get it right.
 
-APIs
-grug love good apis. good apis not make grug think too much
+I have never used Erlang, I hear good things, but the language looks weird to me, sorry.
 
-unfortunately, many apis very bad, make grug think quite a bit. this happen many reasons, here two:
+# APIs
+I love good APIs. Good APIs allow me to think less.
 
-API creators think in terms of implementation or domain of API, rather than in terms of use of API
-API creators think too abstract and big brained
-usually grug not care too deeply about detail of api: want write file or sort list or whatever, just want to call write() or sort() or whatever
+Unfortunately, many APIs are very bad, and make me think quite a bit. This happens for many reasons, here are two:
 
-but big brain api developers say:
+API creators think in terms of implementation or their API domain, rather than how the API will be used.
+API creators think too abstractly and are "big brained"
+Usually I don't care about the details of the API: I want to write files or sort a list, or whatever, i.e., I just want to call write() or sort().
 
-"not so fast, grug! is that file open for write? did you define a Comparator for that sort?"
+But "big brained" API developers say:
 
-grug find self restraining hand reaching for club again
+"not so fast! Is that file open for write? Did you define a Comparator for that sort?"
 
-not care about that stuff right now, just want sort and write file mr big brain!
+I have to restrain myself.
 
-grug recognize that big brain api designer have point and that sometime these things matter, but often do not. big brain api developers better if design for simple cases with simple api, make complex cases possible with more complex api
+I do not care about that stuff right now, I just want to sort and write to the file!
 
-grug call this "layering" apis: two or three different apis at different level complexity for various grug needs
+I recognize that "big brain" API designers have a point, and sometimes these things matter, but often they do not. It's better to design simple cases to work with a simple API and make complex cases possible with a more complex API.
 
-also, if object oriented, put api on thing instead of elsewhere. java worst at this!
+I call this "layering" APIs: two or three different apis at different level complexity for various devleopment needs.
 
-grug want filter list:
+Also, if it's object oriented, put the API on the object instead of somewhere else. Java is the worst at this!
+
+For example, let's say I want to filter a list:
 
 "Did you convert it to a stream?"
 
-fine, grug convert to stream
+Fine, I'll convert it to a stream.
 
 "OK, now you can filter."
 
-OK, but now need return list! have stream!
+OK, but now need a return list! Have a stream!
 
 "Did you collect it in a list?"
 
-grug hand reaching for club yet again, control
+At this point I'm starting to lose my temper, but stay calm.
 
-put common thing like filter() on list and make return list big brain java api developer!
+Put a common thing like filter() on a list and make it return a list!
 
-nobody care about "stream" or even hear of "stream" before, is not networking api big brain! all java developer use list!
+Nobody cares about a "stream" or has even heard of a "stream" before, it's not a networking API! All java developers use lists!
 
-Front End Development
-some non-grugs, when faced with web development say:
+# Front End Development
+Some less experienced developers, when faced with web development say:
 
 "I know, I'll split my front end and back end codebase up and use a hot new SPA library talking to a GraphQL JSON API back end over HTTP (which is funny because I'm not transferring hypertext)"
 
-now you have two complexity demon spirit lairs
+Now you have two additional sources of complexity.
 
-and, what is worse, front end complexity demon spirit even more powerful and have deep spiritual hold on entire front end industry as far as grug can tell
+And, what's worse, front end complexity is very bad and has a hold on the entire front end industry as far as I can tell.
 
-back end developers try keep things simple and can work ok, but front end developers make very complex very quickly and introduce lots of code, demon complex spirit
+Back end developers try keep things simple and can work ok, but front end developers add complexity very quickly and introduce lots of useless code.
 
-even when website just need put form into database or simple brochure site!
+Even when websites just need to put a form into a database or are a simple brochure website!
 
-everyone do this now!
+Everyone does this now!
 
-grug not sure why except maybe facebook and google say so, but that not seem very good reason to grug
+I'm not sure why, except maybe because facebook and google say so, but that doesn't seem like a very good reason to me.
 
-grug not like big complex front end libraries everyone use
+I do not like big complex front end libraries that everyone uses.
 
-grug make htmx and hyperscript to avoid
+To avoid this, I use [htmx](https://htmx.org/) and [hyperscript](https://hyperscript.org/) mainly.
 
-keep complexity low, simple HTML, avoid lots javascript, the natural ether of spirit complexity demon
+Keep complexity low, use simple HTML, avoid lots of javascript.
 
-maybe they work for you, but no job post, sorry
+Maybe they work for you, but there are no job postings, sorry.
 
-react better for job and also some type application, but also you become alcolyte of complexity demon whether you like or no, sorry such is front end life
+React is better for finding a job and for certain types of applications, but also you succumb to complexity whether you like it or not, sorry, such is front end life.
 
-Fads
-grug note lots of fads in development, especially front end development today
+# Fads
+There are lots of fads in development, especially in front end development today.
 
-back end better more boring because all bad ideas have tried at this point maybe (still retry some!)
+Back end is better, it's more boring because all the bad ideas have already been tried at this point, maybe (still, we should retry some!)
 
-still trying all bad ideas in front end development so still much change and hard to know
+They are still trying all the bad ideas in front end development, so there's still a lot of change and it's hard to know what to do. 
 
-grug recommend taking all revolutionary new approach with grain salt: big brains have working for long time on computers now, most ideas have tried at least once. grug not saying can't learn new tricks or no good new ideas, but also much of time wasted on recycled bad ideas, lots of spirit complexity demon power come from putting new idea willy nilly into code base
+I recommend taking all revolutionary new approaches with a grain of salt: "big brains" have been working on computers for a long time now, most ideas have been tried at least once. I'm not saying we can't learn new tricks or there are no good new ideas, but so much time is wasted on recycled bad ideas, lots of complexity comes from putting new ideas willy nilly into your codebase.
 
-note! very good if senior grug willing to say publicly: "hmmm, this too complex for grug"!
+Note: it's very good if senior developers are willing to publicly say: "hmmm, this is too complex for me!"
 
-many developers Fear Of Looking Dumb (FOLD), grug also at one time fold, but grug learn get over: important senior grug say "this too complicated and confuse" this make it ok for junior grugs to admit too complex not understand as well! FOLD major source of complexity demon power over developer, especially younger grugs!
+Many developers have a Fear Of Looking Dumb (FOLD), I also at one time suffered from FOLD, but learned to get over it: It's important that senior developers say "this is too complicated and confusing," this makes it ok for junior developers to admit it's too complex not understandable as well! FOLD can cause unnecessary complexity to enter your code, and is especially dangerous for younger developers.
 
-take FOLD power away, very good senior grug!
+A very good senior developer will take FOLD's power away.
 
-note: important to make thinking face and look big brained when saying though. be prepare for big brain or, worse and much more common, thinks is big brain to make fun. be strong! no fold! club sometimes useful here, but more often sense of humor and especially last failed project by big brain very useful, so collect
+Note: it's important to make a "thinking face" and look "big brained" when admitting you don't understand something. Be prepareed for a "big brain" or someone who thinks they are a "big brain" to make fun of you. Be strong! no FOLD! It's important to have a sense of humor, especially if you can point to the last failed project by "big brain," so collect these. 
 
-Impostor Syndrome
-grug note many such impostor feels in development
+# Impostor Syndrome
+Often times, you will feel like an impostor during software development.
 
-always grug one of two states: grug is ruler of all survey, wield code club like thor OR grug have no idea what doing
+You are usually in one of two states: I'm the ruler of all I survey, wielding a code club like thor OR I have no idea what doing
 
-grug is mostly latter state most times, hide it pretty well though
+I'm in the latter state most times, but I hide it pretty well.
 
-now, grug make softwares of much work and moderate open source success, and yet grug himself often feel not any idea what doing! very often! fear make mistake break everyone code and disappoint other grugs!
+Now, I have made much working software and have had moderate open source success, yet I often feel like I have no idea what I'm doing! Very often! I fear I'll make a mistake and break everyone's code and disappoint other developers!
 
-is maybe nature of programming for most and be ok with is best, nobody imposter if everybody imposter
+Maybe it's the nature of programming for the most part and being ok with that is best, nobody's an imposter if everybody's an imposter.
 
-any young grug read this far probably do fine in program career even if frustrations and worry is always to be there, sorry
+Any young developer who has read this far probably will do fine in a programming career even if frustrations and worry will always be there, sorry.
 
-Reads
-grug like these:
+# Reads
+I like these:
 
-Worse is Better
-A Philosophy of Software Design
-Conclusion
-complexity very, very bad
+- Worse is Better
+- A Philosophy of Software Design
+
+# Conclusion
+Complexity is very, very bad.
