@@ -11,8 +11,8 @@ This uses pandoc to create an HTML website from the markdown in [grug_dev_transl
 # TODO
 - [x] ~~Finish first draft of translation~~
 - [x] ~~Create viewable website index.html~~
-- [ ] Contact author and get their feedback/permission
-  - [ ] This appears to be the author https://twitter.com/htmx_org/status/1539713592794169346
+- [x] Contact author and get their feedback/permission
+  - [x] This appears to be the author https://twitter.com/htmx_org/status/1539713592794169346
 - [ ] Find a way to show the original source material on the page
   - Idea 1: Show the two side by side in a page-split method (left hand original, right hand translation?) - won't work mobile
   - Idea 2: Create a tool to add tooltips to each line which show the original text on hover:
